@@ -6,6 +6,25 @@
 Andrej Karpathy)
 
 
+#### MNIST data reshape [batch_size, n_steps, n_inputs] as is expected by the RNN
+```
+X = tf.placeholder(tf.float32, [None, n_steps, n_inputs])
+y = tf.placeholder(tf.int32, [None])
+````
+
+#### BasicRNNCell as a factory that creates copies of the cell to build the unrolled RNN (one for each time step)
+```
+basic_cell = tf.contrib.rnn.BasicRNNCell(num_units=n_neurons)
+```
+
+#### The dynamic_rnn() function uses a while_loop() operation to run over the cell the appropriate number of times. It also accepts a single tensor for all inputs at every time step (shape [None, n_steps, n_inputs]) and it outputs a single tensor for all outputs at every time step (shape [None, n_steps, n_neurons]). The states tensor contains the final state of each cell
+
+```
+outputs, states = tf.nn.dynamic_rnn(basic_cell, X, dtype=tf.float32)
+
+```
+
+
 
 
 
