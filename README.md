@@ -1,4 +1,4 @@
-! [alt tag ] (http://karpathy.github.io/assets/rnn/charseq.jpeg)
+! [alt tag] (http://karpathy.github.io/assets/rnn/charseq.jpeg)
 
 # A voir et à savoir : 
 
