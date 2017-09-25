@@ -1,6 +1,3 @@
-![alt tag](http://karpathy.github.io/assets/rnn/charseq.jpeg)
-* Exemple de Recurrent Neural Network
-
 
 # A voir et à savoir : 
 
