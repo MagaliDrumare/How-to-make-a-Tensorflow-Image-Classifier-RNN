@@ -18,7 +18,7 @@ y = tf.placeholder(tf.int32, [None])
 ```
 basic_cell = tf.contrib.rnn.BasicRNNCell(num_units=n_neurons)
 ```
-#### La fonction dynamic_rnn()accept en input X (shape [None, n_steps, n_inputs], comme outputs (shape [None, n_steps, n_neurons]. The states,un tensor qui contient l'état final de chacune des cellules. 
+#### La fonction dynamic_rnn()accept en input X (shape [None, n_steps, n_inputs], comme outputs (shape [None, n_steps, n_neurons]. The "states" est un tensor qui contient l'état final de chacune des cellules. 
 
 ```
 outputs, states = tf.nn.dynamic_rnn(basic_cell, X, dtype=tf.float32)
