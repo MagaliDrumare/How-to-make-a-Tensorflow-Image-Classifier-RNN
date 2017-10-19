@@ -10,12 +10,14 @@ Andrej Karpathy)
 
 #### MNIST data reshape [batch_size, n_steps, n_inputs] est attendu par le RNN 
 ```
+python
 X = tf.placeholder(tf.float32, [None, n_steps, n_inputs])
 y = tf.placeholder(tf.int32, [None])
 ````
 
 #### BasicRNNCell est une usine qui fabrique des cellules RNN (une pour chacun des "time step")
 ```
+python
 basic_cell = tf.contrib.rnn.BasicRNNCell(num_units=n_neurons)
 ```
 #### La fonction dynamic_rnn()accept en input X (shape [None, n_steps, n_inputs], comme outputs (shape [None, n_steps, n_neurons]. The "states" est un tensor qui contient l'état final de chacune des cellules. 
